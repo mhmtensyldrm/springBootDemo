@@ -24,6 +24,7 @@ public class HibernateCityDal implements ICityDal{
 		return cities;
 	}
 
+	@Transactional
 	public void add(City city) {
 		if(city.getId() != 0) {
 			Session session = entityManager.unwrap(Session.class);
@@ -31,18 +32,20 @@ public class HibernateCityDal implements ICityDal{
 		}
 	}
 
+	@Transactional
 	public void update(City city) {
 		Session session = entityManager.unwrap(Session.class);
 		session.saveOrUpdate(city);
 		
 	}
 
+	@Transactional
 	public void delete(City city) {
 		Session session = entityManager.unwrap(Session.class);
 		session.delete(city);
 	}
 
-	
+	@Transactional
 	public City getById(int id) {
 		Session session = entityManager.unwrap(Session.class);
 		City city = session.get(City.class, id);
