@@ -29,6 +29,8 @@ public class City {
 		this.district = district;
 		this.population = population;
 	}
+	
+	public City() {}
 
 	public int getId() {
 		return id;
