@@ -11,16 +11,16 @@ public class City {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name="Name")
+	@Column(name="name")
 	private String name;
 	
-	@Column(name="CountryCode")
+	@Column(name="countrycode")
 	private String countryCode;
 	
-	@Column(name="District")
+	@Column(name="district")
 	private String district;
 	
-	@Column(name="Population")
+	@Column(name="population")
 	private int population;
 	
 	public City(int id, String name, String countryCode, String district, int population) {
