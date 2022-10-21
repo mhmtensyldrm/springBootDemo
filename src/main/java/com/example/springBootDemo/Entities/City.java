@@ -2,6 +2,8 @@ package com.example.springBootDemo.Entities;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name="city")
 public class City {
 	
 	@Id
