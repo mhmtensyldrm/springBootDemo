@@ -42,4 +42,12 @@ public class HibernateCityDal implements ICityDal{
 		session.delete(city);
 	}
 
+	
+	public City getById(int id) {
+		Session session = entityManager.unwrap(Session.class);
+		City city = session.get(City.class, id);
+		
+		return city;
+	}
+
 }
